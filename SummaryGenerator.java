@@ -7,10 +7,14 @@ public class SummaryGenerator {
 	public static void main(String[] args) throws ParserConfigurationException {
 		final String USER_XML = args[0];
 		final String POSTS_XML = args[1];
+//		
+//		UsersDomParser usersDomParser = new UsersDomParser();
+//		Document docUsers = usersDomParser.parseFile(USER_XML);
+//		usersDomParser.extractElements(docUsers);
 		
-		UsersDomParser userDomParser = new UsersDomParser();
-		Document doc = userDomParser.parseFile(USER_XML);
-		userDomParser.extractElements(doc);
+		PostsDomParser postsDomParser = new PostsDomParser();
+		Document docPosts = postsDomParser.parseFile(POSTS_XML);
+		postsDomParser.extractElements(docPosts);
 
 	}
 

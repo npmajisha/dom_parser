@@ -16,11 +16,9 @@ public class UsersDomParser extends DomParser {
 
 	@Override
 	protected void extractElements(Document doc) {
-
 		doc.getDocumentElement().normalize();
 
 		NodeList users = doc.getDocumentElement().getElementsByTagName(TAG_ROW);
-
 		int numberOfUsers = users.getLength();
 		System.out.println("Total Number of Users = " + numberOfUsers);
 
